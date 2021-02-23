@@ -1,3 +1,7 @@
+/*
+ * @Author: Zhao Shiyu
+ * @Date: 2021-02-23 23:38:06
+ */
 #pragma once
 
 #include "3rd_party/yaml-cpp/yaml.h"
@@ -32,6 +36,11 @@ std::vector<Item> loadItems(const void* ptr);
 std::vector<Item> mmapItems(const void* ptr);
 
 void saveItems(const std::string& fileName, const std::vector<Item>& items);
+
+void saveInt16Items(const std::string& fileName, const std::vector<Item>& items);
+
+std::vector<std::string> loadVocab(const std::string& vocabPath, size_t maxSize);
+void saveTxtVocab(const std::string& vocabPath, std::vector<std::string>& vocab, size_t maxSize);
 
 }  // namespace io
 }  // namespace marian

@@ -283,6 +283,7 @@ std::vector<std::string> loadVocab(const std::string& vocabPath, size_t maxSize)
   return vocabs;
 }
 
+
 void saveTxtVocab(const std::string& vocabPath, std::vector<std::string>& vocab, size_t maxSize) {
   size_t count = 0;
   io::OutputFileStream out(vocabPath);
